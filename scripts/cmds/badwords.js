@@ -83,8 +83,8 @@ module.exports = {
 	onStart: async function ({ message, event, args, threadsData, usersData, role, getLang }) {
 		if (!await threadsData.get(event.threadID, "data.badWords"))
 			await threadsData.set(event.threadID, {
-				words: [],
-				violationUsers: {}
+				words: [yawa, piste, dick, fuck, pussy, gago, bobo, tangina, animal, piskot],
+				violationUsers: {10}
 			}, "data.badWords");
 
 		const badWords = await threadsData.get(event.threadID, "data.badWords.words", []);
